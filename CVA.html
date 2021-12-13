@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Student{
+            name;
+            grade;
+            birthdate;
+            math;
+            physic;
+            chemistry;
+
+            constructor(_name,_grade,_birthdate){
+                this.name = _name;
+                this.grade = _grade;
+                this.birthdate = _birthdate;
+                
+                this.math = 0;
+                this.physic = 0;
+                this.chemistry = 0;
+            }
+
+            setPoint(_math,_physic,_chemistry){
+                this.math = _math;
+                this.physic = _physic;
+                this.chemistry = _chemistry;
+            }
+
+            getAvg(){
+                let avg = (this.math + this.physic + this.chemistry)/3;
+                return avg.toFixed(1);
+            }
+        }
+
+        let hieu = new Student("Hiếu","12A1","1/1/2001");
+        hieu.setPoint(9,10,7);
+        
+        let tiem = new Student("Tiêm","12A1","12/2/2001");
+        tiem.setPoint(5,8,10);
+        
+
+        let mai = new Student("Mai","12A2","15/7/2001");
+        mai.setPoint(8,8,9);
+
+        let hiep = new Student("Hiệp","12A3","02/4/2001");
+        hiep.setPoint(7,7,10);
+
+        let ngoc = new Student("Ngọc","12A3","27/7/2001");
+        ngoc.setPoint(9,9,6);
+
+        let students = [hieu,tiem,mai,hiep,ngoc];
+        console.log(students);
+
+        for (let i = 0; i < students.length; i++) {
+            console.log(students[i].grade+"-"+students[i].name + ":" + students[i].getAvg());
+        }
+
+        // students.forEach(function (s) {
+        //     console.log(s.name + ":" + s.getAvg());
+        // })
+    </script>
+</body>
+</html>

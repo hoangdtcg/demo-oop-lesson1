@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Lớp - Class : Khuôn mẫu
+        class Student{
+            name;
+            age;
+            address;
+            birthdate;
+
+            constructor(_name,_age,_address,_birthdate){
+                this.name = _name;
+                this.age = _age;
+                this.address = _address;
+                this.birthdate = _birthdate;
+            }
+
+            defaultValue(){
+                this.name = "Hoàng";
+                this.age = 18;
+                this.address = "HN";
+                this.birthdate = "12/12/2001";
+            }
+        }
+
+        let phone = ["img.jpg","Iphone 13 128GB",24990000,24490000,"4.5",58];
+        //đối tượng: object key:value
+        let phoneObj = {
+            image: "img.jpg",
+            name: "Iphone 13 128GB",
+            basePrice: 24990000,
+            salePrice:24490000,
+            rate: 4.5,
+            rateCount: 58
+        };
+
+        let student1 = {
+            name: "Hiếu",
+            age: 18,
+            address: "HN",
+            birthdate: "12/12/2002",
+
+            getInfo() {
+                
+            }
+        }
+
+        let student2 = {
+            name: "Bảo Anh",
+            age: 17,
+            address: "HCM",
+            birthdate: "14/12/2003"
+        }
+
+        // let student3 = new Student("Vinh",30,"Phú Thọ","3/3/1991");
+        // let student4 = new Student("Hải",25,"Hà Nội","31/04/1996");
+        // let student5 = new Student();
+        // student5.defaultValue();
+        
+        let student10 = new Student();
+        student10.name = "Tiêm";
+        student10.age = 18;
+        
+        // console.log(phoneObj["name"]);
+        // console.log(phoneObj.rate);
+        // console.log(student.address); 
+        console.log(student10);
+        // console.log(student4);
+        // console.log(student5);
+    </script>
+</body>
+</html>
